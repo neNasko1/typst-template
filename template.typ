@@ -1,7 +1,6 @@
 #let conf(
   title: none,
-  authors: (),
-  doc,
+  authors: (), doc,
 ) = {
 	set page(
 		paper: "a4",
@@ -101,3 +100,6 @@ $
 		element
 	)
 }
+
+#let NOTE(txt, col: red) = block(text(col, "[NOTE: " + txt + "]"))
+#let TODO = block(text(red, "TODO"))
