@@ -93,6 +93,15 @@ $
 		)
 	}
 
+	let element = {
+		text(
+			raw(
+				raw_text,
+				lang: lang,
+			)
+		)
+	}
+
 	block(
 		fill: luma(240),
 		inset: 8pt,
@@ -100,6 +109,9 @@ $
 		element
 	)
 }
+
+#let Jac(fs) = { $ upright(bold(J))(fs) $ }
+#let Hess(fs) = { $ upright(bold(H))(fs) $ }
 
 #let NOTE(txt, col: red) = block(text(col, "[NOTE: " + txt + "]"))
 #let TODO = block(text(red, "TODO"))
