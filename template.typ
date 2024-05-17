@@ -106,12 +106,15 @@ $
 		fill: luma(240),
 		inset: 8pt,
 		radius: 5pt,
+    breakable: false,
 		element
 	)
 }
 
 #let Jac(fs) = { $ upright(bold(J))(fs) $ }
 #let Hess(fs) = { $ upright(bold(H))(fs) $ }
+
+#let keyword(kwrd) = { $upright(bold(#kwrd))$ }
 
 #let NOTE(txt, col: red) = block(text(col, "[NOTE: " + txt + "]"))
 #let TODO = block(text(red, "TODO"))
