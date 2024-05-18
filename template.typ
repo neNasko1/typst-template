@@ -73,6 +73,7 @@ $
 	src,
 	lang: none,
 	detab: true,
+  title: none
 ) = {
 	let raw_text = read(src)
 
@@ -93,22 +94,18 @@ $
 		)
 	}
 
-	let element = {
-		text(
-			raw(
-				raw_text,
-				lang: lang,
-			)
-		)
-	}
-
-	block(
-		fill: luma(240),
-		inset: 8pt,
-		radius: 5pt,
+  block(
     breakable: false,
-		element
-	)
+    {
+      title 
+      block(
+        fill: luma(240),
+        inset: 8pt,
+        radius: 5pt,
+        element
+      )
+    }
+  )
 }
 
 #let Jac(fs) = { $ upright(bold(J))(fs) $ }
